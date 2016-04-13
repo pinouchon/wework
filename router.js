@@ -19,15 +19,15 @@ Router.map(function() {
     this.route('home', {
         path: '/',
         layoutTemplate: 'layoutNoContainer',
-        onBeforeAction: function () {
-            var user = Meteor.user();
-            var setupOk = user.schoolSetup;
-            if (!user || !setupOk) {
-                Router.go('schoolSetup');
-            } else {
-                this.next();
-            }
-        },
+        //onBeforeAction: function () {
+        //    var user = Meteor.user();
+        //    var setupOk = user.schoolSetup;
+        //    if (!user || !setupOk) {
+        //        Router.go('schoolSetup');
+        //    } else {
+        //        this.next();
+        //    }
+        //},
         data: function() {
             return {
                 jobs: Jobs.find({

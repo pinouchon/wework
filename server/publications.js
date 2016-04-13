@@ -156,6 +156,10 @@ Meteor.publish("jobs", function(limit) {
     });
 });
 
+Meteor.publish('schools', function() {
+    return Schools.find();
+});
+
 Meteor.publish("my_jobs", function() {
     check(arguments, [Match.Any]);
     if (this.userId) {

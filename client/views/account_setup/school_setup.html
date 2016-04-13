@@ -1,7 +1,25 @@
 <template name="schoolSetup">
-  school setup
+
+  <input id="schools"
+         class="form-control typeahead" name="team" type="text"
+         placeholder="Mon école"
+         autocomplete="on" spellcheck="off"
+         data-source="schools"/>
+
+    <!--<div class="form-group">-->
+      <!--<input class="form-control typeahead" name="team" type="text"-->
+             <!--placeholder="NBA and NHL teams"-->
+             <!--autocomplete="on" spellcheck="off"-->
+             <!--data-sets="schools"/>-->
+    <!--</div>-->
+
+
 
   <br/>
   <a href="/" class="prev">&lt; Précédent</a>
   <a href="/mes-tags" class="next">Suivant ></a>
+</template>
+
+<template name="team">
+  <h4><i>{{name}}</i></h4>
 </template>
