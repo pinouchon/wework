@@ -41,6 +41,11 @@ Profiles.attachSchema(
       label: "Name",
       max: 128
     },
+    school: {
+      type: String,
+      label: 'Your school',
+      allowedValues: ['Edhec', 'Essec', 'Epitech', 'Epita']
+    },
     type: {
       type: String,
       label: "Individual or Company",
