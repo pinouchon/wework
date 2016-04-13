@@ -1,23 +1,30 @@
 <template name="schoolSetup">
 
-  <input id="schools"
-         class="form-control typeahead" name="team" type="text"
-         placeholder="Mon école"
-         autocomplete="on" spellcheck="off"
-         data-source="schools"/>
+  <select class="form-control" id="schools" placeholder="Ecole...">
+    <option value="">Ecole...</option>
+    {{#each schools}}
+      <option value="{{name}}">{{name}}</option>
+    {{/each}}
+  </select>
 
-    <!--<div class="form-group">-->
-      <!--<input class="form-control typeahead" name="team" type="text"-->
-             <!--placeholder="NBA and NHL teams"-->
-             <!--autocomplete="on" spellcheck="off"-->
-             <!--data-sets="schools"/>-->
-    <!--</div>-->
+  <br/>
 
+  <select class="form-control" id="specialities" placeholder="Spécialité...">
+  </select>
+
+  <!--<div class="form-group">-->
+  <!--<input class="form-control typeahead" name="team" type="text"-->
+  <!--placeholder="NBA and NHL teams"-->
+  <!--autocomplete="on" spellcheck="off"-->
+  <!--data-sets="schools"/>-->
+  <!--</div>-->
 
 
   <br/>
-  <a href="/" class="prev">&lt; Précédent</a>
-  <a href="/mes-tags" class="next">Suivant ></a>
+  <div class="col-md-12 text-center">
+    <a href="/" class="btn prev">&lt; Précédent</a>
+    <a href="/mes-tags" class="btn btn-primary next">Suivant ></a>
+  </div>
 </template>
 
 <template name="team">
