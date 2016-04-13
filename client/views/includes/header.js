@@ -1,7 +1,7 @@
 Template.header.events({
   'click .navbar-nav a': function(event, template) {
     var targetButton = document.getElementsByClassName('navbar-toggle')[0];
-    var _this = $(event.currentTarget); 
+    var _this = $(event.currentTarget);
 
     if (window.innerWidth < 768) {
       if( !_this.hasClass('box-user-option') ){
@@ -10,6 +10,17 @@ Template.header.events({
     }
   }
 });
+
+Template.header.helpers({
+  isHome: function() {
+    return Router.current().route.getName() == 'home';
+  }
+})
+Template.footer.helpers({
+  isHome: function() {
+    return Router.current().route.getName() == 'home';
+  }
+})
 
 Template.headerUserMenu.helpers({
   profile: function() {
@@ -26,7 +37,7 @@ Template.headerUserMenu.events({
   },
   'click .navbar-nav a': function(event, template) {
     var targetButton = document.getElementsByClassName('navbar-toggle')[0];
-    var _this = $(event.currentTarget); 
+    var _this = $(event.currentTarget);
 
     if (window.innerWidth < 768) {
       if( !_this.hasClass('box-user-option') ){

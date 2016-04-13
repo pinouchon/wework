@@ -51,14 +51,14 @@ h1,h2,h3,h4,h5{
     a{
        font-size: 125%;
     }
-} 
+}
 
 #connection-lost-banner{
     text-align: center;
 }
 
 nav.navbar, .btn, li a, .input-group-addon, .jumbotron, .panel, .label{
-  border-radius: 0px !important; 
+  border-radius: 0px !important;
 }
 
 .form-control{
@@ -113,7 +113,7 @@ nav.navbar {
         }
     }
     .nav.navbar-nav li{
-        
+
         p.navbar-text{
            font-size: 12px;
             font-weight: normal;
@@ -132,15 +132,15 @@ nav.navbar {
                 background:none;
                 color:@brand-primary;
             }
-            
-        } 
+
+        }
     }
 }
 
 footer {
     border-top: 2px solid @brand-primary;
     margin-top:20px;
-    padding: 20px 0px 20px 0px;    
+    padding: 20px 0px 20px 0px;
 
     a:visited {
         color: @brand-primary;
@@ -178,4 +178,48 @@ a.prev {
 
 a.next {
   right: 80px;
+}
+
+// HOMEPAGE
+body,
+html,
+#content-wrapper {
+  height: 100%;
+  min-height: inherit;
+}
+.clear {
+  clear: both;
+}
+.homepage {
+  height: 100%;
+  background: url('images/homepage-background.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  &__button {
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+  }
+  &__tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+.btn-home {
+  border: 1px solid #ffffff;
+  padding: 20px 0;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  &.btn-half {
+    width: 47%
+  }
+  &.btn-all {
+    width: 100%;
+    margin-top: 20px;
+  }
+  img {
+    margin-right: 5px;
+  }
 }
