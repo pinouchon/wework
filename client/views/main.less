@@ -193,7 +193,7 @@ html,
 .homepage {
   height: 100%;
   background: url('images/homepage-background.jpg');
-  background-size: 100% 100%;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   &__button {
     position: fixed;
@@ -221,5 +221,19 @@ html,
   }
   img {
     margin-right: 5px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .homepage-content {
+    max-width: 600px;
+    margin: auto;
+  }
+  .homepage__button {
+    position: inherit;
+    margin-top: 50px;
+  }
+  .app-logo {
+    width: 80%;
+    height: auto;
   }
 }
