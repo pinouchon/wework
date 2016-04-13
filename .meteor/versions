@@ -1,9 +1,5 @@
 accounts-base@1.2.5
-accounts-facebook@1.0.8
-accounts-google@1.0.8
-accounts-oauth@1.1.11
 accounts-password@1.1.7
-accounts-twitter@1.0.8
 accounts-ui-unstyled@1.1.11
 alanning:roles@1.2.15
 aldeed:autoform@5.8.1
@@ -46,13 +42,11 @@ ecmascript@0.4.2
 ecmascript-runtime@0.2.9
 ejson@1.0.10
 email@1.0.11
-facebook@1.2.5
 fastclick@1.0.10
 forwarder:autoform-wizard@0.9.1
 gadicohen:robots-txt@0.0.10
 gadicohen:sitemaps@0.0.24
 geojson-utils@1.0.7
-google@1.1.10
 hot-code-push@1.0.3
 html-tools@1.0.8
 htmljs@1.0.8
@@ -108,9 +102,6 @@ nemo64:bootstrap-data@3.3.5
 nimble:restivus@0.8.10
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.42
-oauth@1.1.9
-oauth1@1.1.8
-oauth2@1.1.8
 observe-sequence@1.0.10
 ongoworks:speakingurl@6.0.0
 ordered-dict@1.0.6
@@ -147,7 +138,6 @@ templating-tools@1.0.3
 tmeasday:publish-counts@0.7.3
 tracker@1.0.12
 twbs:bootstrap@3.3.6
-twitter@1.1.8
 ui@1.0.10
 underscore@1.0.7
 url@1.0.8

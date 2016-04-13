@@ -1,4 +1,5 @@
 <template name="footer">
+{{#unless isHome}}
 	<footer class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12 text-center">
@@ -15,7 +16,7 @@
 				<small>
 					<i class="fa fa-rss"></i> RSS <a href="/rss/jobs" target="_blank">Jobs</a> <a href="/rss/profiles" target="_blank">Developers</a>
 					&nbsp;-&nbsp;
-					<i class="fa fa-code"></i> JSON <a href="/api/jobs" target="_blank">Jobs</a> <a href="/api/profiles" target="_blank">Developers</a> 
+					<i class="fa fa-code"></i> JSON <a href="/api/jobs" target="_blank">Jobs</a> <a href="/api/profiles" target="_blank">Developers</a>
 				</small>
 				<br>
 			</div>
@@ -26,4 +27,5 @@
 			</div>
 		</div>
 	</footer>
+{{/unless}}
 </template>

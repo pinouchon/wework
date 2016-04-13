@@ -6,9 +6,9 @@
 less
 service-configuration
 accounts-password
-accounts-facebook
-accounts-google
-accounts-twitter
+#accounts-facebook
+#accounts-google
+#accounts-twitter
 iron:router
 natestrauser:font-awesome
 raix:handlebar-helpers
