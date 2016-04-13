@@ -41,6 +41,10 @@ UserSchema = new SimpleSchema({
     type: Boolean,
     defaultValue: false
   },
+  schoolSetup: {
+    type: Boolean,
+    defaultValue: false,
+  },
   createdAt: {
     type: Date
   },

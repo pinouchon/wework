@@ -19,6 +19,15 @@ Router.map(function() {
     this.route('home', {
         path: '/',
         layoutTemplate: 'layoutNoContainer',
+        onBeforeAction: function () {
+            var user = Meteor.user();
+            var setupOk = user.schoolSetup;
+            if (!user || !setupOk) {
+                Router.go('schoolSetup');
+            } else {
+                this.next();
+            }
+        },
         data: function() {
             return {
                 jobs: Jobs.find({
@@ -203,6 +212,62 @@ Router.map(function() {
             _id: this.params._id
         });
     });
+
+    this.route('/preferences/:step?', {
+        name: 'preferences',
+        onBeforeAction: function() {
+            console.log(this.params.step);
+            if (!this.params.step) {
+                this.redirect('preferences', {
+                    step: 'school-information'
+                });
+            } else {
+                this.next();
+            }
+        }
+    });
+
+    this.route('/user-preferences/:_id', {
+        name: 'viewUserPreferences',
+        template: 'viewUserPreferences',
+        data: function() {
+            console.log('bbbb');
+            return UserPreferences.findOne(this.params._id);
+        }
+    });
+
+    this.route('/mon-ecole', {
+        name: 'schoolSetup',
+        template: 'schoolSetup',
+        data: function() {
+            return {};
+        }
+    });
+
+    this.route('/mes-tags', {
+        name: 'tagsSetup',
+        template: 'tagsSetup',
+        data: function() {
+            return {};
+        }
+    });
+
+    this.route('/mon-alerte-offre', {
+        name: 'alertSetup',
+        template: 'alertSetup',
+        data: function() {
+            return {};
+        }
+    });
+
+    this.route('/offres', {
+        name: 'jobList',
+        template: 'jobList',
+        data: function() {
+            return {};
+        }
+    });
+
 });
 
 Router.plugin('ensureSignedIn', {

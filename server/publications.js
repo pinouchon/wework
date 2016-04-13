@@ -207,7 +207,8 @@ Meteor.publish("developerUsers", function() {
     check(arguments, [Match.Any]);
     return [
         Users.find({ //this may publish users for not active status profiles
-            isDeveloper: true
+            isDeveloper: true,
+            schoolSetup: true
         }, {
             fields: {
                 "emailHash": true,
