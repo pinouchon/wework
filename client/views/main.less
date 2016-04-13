@@ -183,7 +183,8 @@ a.next {
 // HOMEPAGE
 body,
 html,
-#content-wrapper {
+#content-wrapper,
+.container-form {
   height: 100%;
   min-height: inherit;
 }
@@ -235,5 +236,57 @@ html,
   .app-logo {
     width: 80%;
     height: auto;
+  }
+}
+
+// Sign In & Up
+.container-form {
+  background: #274a60;
+  .at-form {
+    margin-top: 0;
+  }
+  h3 {
+    color: #ffffff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+  }
+  .app-logo {
+    width: 50%;
+    height: auto;
+  }
+  .form-control {
+    background: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 27px 0;
+    text-align: center;
+    color: white;
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: white;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: white;
+      opacity:  1;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: white;
+      opacity:  1;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: white;
+    }
+  }
+  #at-btn {
+    padding: 20px 0;
+    background: #8d5ca1;
+    border: 0;
+    border-bottom: 2px solid darken(#8d5ca1, 10);
+  }
+  .at-form {
+    color: #ffffff;
+    a {
+      color: #d9aaec;
+    }
   }
 }
