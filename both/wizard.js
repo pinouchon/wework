@@ -1,5 +1,22 @@
-//Orders = new Meteor.Collection('orders', {connection: null});
-//
+UserPreferences = new Meteor.Collection('userPreferences', {connection: null});
+Schemas = {};
+Schemas.schoolInformation = new SimpleSchema({
+  name:{
+    type: String,
+    label: "Nom de l'école"
+  },
+  formation: {
+    type: String,
+    label: 'Type de formation'
+  }
+});
+Schemas.tagsInformation = new SimpleSchema({
+  tags:{
+    type: [String],
+    label: 'Should be array'
+  },
+});
+
 //Schemas.contactInformation = new SimpleSchema({
 //  name:{
 //    type: String,
@@ -47,33 +64,8 @@
 //    }
 //  }
 //});
-//
-//Orders.attachSchema([
-//  Schemas.contactInformation,
-//  Schemas.paymentInformation
-//]);
-//
-//
-//Wizard.useRouter('iron:router');
-//
-//Router.route('/basic/:step?', {
-//  name: 'basic',
-//  onBeforeAction: function() {
-//    console.log(this.params.step);
-//    if (!this.params.step) {
-//      this.redirect('basic', {
-//        step: 'contact-information'
-//      });
-//    } else {
-//      this.next();
-//    }
-//  }
-//});
-//
-//Router.route('/orders/:_id', {
-//  name: 'viewOrder',
-//  template: 'viewOrder',
-//  data: function() {
-//    return Orders.findOne(this.params._id);
-//  }
-//});
+
+UserPreferences.attachSchema([
+  Schemas.schoolInformation,
+  Schemas.tagsInformation
+]);

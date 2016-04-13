@@ -23,14 +23,14 @@ AutoForm.addHooks(['profileNew', 'profileEdit'], {
   }
 });
 
-Template.profileEdit.events({
-  'click #cancel': function(event, template) {
-    event.preventDefault();
-    Router.go("profile", {
-      _id: this.profile._id
-    });
-  }
-})
+//Template.profileEdit.events({
+//  'click #cancel': function(event, template) {
+//    event.preventDefault();
+//    Router.go("profile", {
+//      _id: this.profile._id
+//    });
+//  }
+//});
 
 var customImagePreviewUrl = new ReactiveVar();
 

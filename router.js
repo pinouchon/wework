@@ -203,6 +203,30 @@ Router.map(function() {
             _id: this.params._id
         });
     });
+
+    this.route('/preferences/:step?', {
+        name: 'preferences',
+        onBeforeAction: function() {
+            console.log(this.params.step);
+            if (!this.params.step) {
+                this.redirect('preferences', {
+                    step: 'school-information'
+                });
+            } else {
+                this.next();
+            }
+        }
+    });
+
+    this.route('/user-preferences/:_id', {
+        name: 'viewUserPreferences',
+        template: 'viewUserPreferences',
+        data: function() {
+            console.log('bbbb');
+            return UserPreferences.findOne(this.params._id);
+        }
+    });
+
 });
 
 Router.plugin('ensureSignedIn', {
