@@ -5,7 +5,6 @@
 
 less
 service-configuration
-accounts-ui
 accounts-password
 accounts-facebook
 accounts-google
@@ -22,7 +21,7 @@ natestrauser:connection-banner
 lampe:rssfeed
 meteorhacks:kadira
 aldeed:delete-button
-useraccounts:bootstrap
+#useraccounts:bootstrap
 meteorhacks:subs-manager
 dburles:collection-helpers
 alanning:roles
@@ -69,3 +68,4 @@ mdg:seo
 standard-minifier-css
 standard-minifier-js
 forwarder:autoform-wizard
+accounts-ui-unstyled

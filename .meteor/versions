@@ -4,7 +4,6 @@ accounts-google@1.0.8
 accounts-oauth@1.1.11
 accounts-password@1.1.7
 accounts-twitter@1.0.8
-accounts-ui@1.1.8
 accounts-ui-unstyled@1.1.11
 alanning:roles@1.2.15
 aldeed:autoform@5.8.1
@@ -152,7 +151,6 @@ twitter@1.1.8
 ui@1.0.10
 underscore@1.0.7
 url@1.0.8
-useraccounts:bootstrap@1.13.1
 useraccounts:core@1.13.1
 useraccounts:iron-routing@1.13.1
 utilities:avatar@0.9.2
