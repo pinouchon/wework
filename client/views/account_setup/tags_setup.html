@@ -1,23 +1,26 @@
 <template name="tagsSetup">
+  <div class="setup">
+    <center>
+      <h1>Ma formation et compétences</h1>
+      <p>Un autre blabla</p>
+    </center>
 
-  <center>
-    <h1>Ma formation et compétences</h1>
-  </center>
+    <div class="form-container container">
+      <select id="tags" name="tags" multiple="multiple" class="demo-default selectized"
+              style="margin: 0 auto;max-width: 600px;" placeholder="tag...">
 
-  <div class="form-container">
-    <select id="tags" name="tags" multiple="multiple" class="demo-default selectized"
-            style="margin: 0 auto;max-width: 600px;" placeholder="tag...">
+        {{#each tags}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
 
-      {{#each tags}}
-        <option value="{{name}}">{{name}}</option>
-      {{/each}}
-    </select>
-  </div>
+    <br/>
 
-  <br/>
+    <div class="setup__button">
+      <a href="/ma-recherche" class="btn btn-prev btn-half pull-left">Précédent</a>
+      <a href="/mon-alerte-offre" class="btn btn-next btn-half pull-right">Suivant</a>
+    </div>
 
-  <div class="col-md-12 text-center">
-    <a href="/ma-recherche" class="btn prev">&lt; Précédent</a>
-    <a href="/mon-alerte-offre" class="btn btn-primary next">Suivant ></a>
   </div>
 </template>
