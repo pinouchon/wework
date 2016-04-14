@@ -146,11 +146,13 @@ Meteor.publish("jobs", function(limit) {
             remote: true,
             jobtype: true,
             status: true,
-            featuredThrough: true
+            featuredThrough: true,
+            percent: true
         },
         sort: {
-            featuredThrough:-1,
-            createdAt: -1
+            percent: -1
+            //featuredThrough:-1,
+            //createdAt: -1
         },
         limit: limit
     });
