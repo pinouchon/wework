@@ -1,39 +1,39 @@
 <template name="alertSetup">
+  <div class="setup">
+    <center class="container">
+      <h1>Créer une alerte</h1>
+      <p>M'envoyer un récapitulatif des nouvelles offres par emails</p>
+      <br />
+      <div class="form-container container">
+        <form class="form">
 
-  <center>
-    <h1>Créer une alerte</h1>
+          <div class="btn-group btn-group-alert" data-toggle="buttons" style="margin: 0 auto;text-align: center;">
 
-    <div class="form-container">
-      <form class="form">
-        <label for="year" class="control-label input-group">
-          M'envoyer un récapitulatif des nouvelles offres
-        </label>
+            <label class="btn btn-default btn-choice">
+              <input name="year" value="2011" type="radio">Tous les jours
+            </label>
+            <label class="btn btn-default btn-choice active">
+              <input name="year" value="2012" type="radio" class="active">Toutes les semaines
+            </label>
+            <br/>
+            <label class="btn btn-default btn-choice">
+              <input name="year" value="2013" type="radio">Tous les mois
+            </label>
+            <label class="btn btn-default btn-choice">
+              <input name="year" value="2011" type="radio">Pas pour l'instant
+            </label>
+          </div>
 
-        <div class="btn-group" data-toggle="buttons" style="margin: 0 auto;text-align: center;">
+        </form>
+      </div>
+    </center>
 
-          <label class="btn btn-default" style="width: 43%">
-            <input name="year" value="2011" type="radio">Tous les jours
-          </label>
-          <label class="btn btn-default active" style="width: 57%">
-            <input name="year" value="2012" type="radio" class="active">Toutes les semaines
-          </label>
-          <br/>
-          <label class="btn btn-default" style="width: 50%">
-            <input name="year" value="2013" type="radio">Tous les mois
-          </label>
-          <label class="btn btn-default" style="width: 50%">
-            <input name="year" value="2011" type="radio">Pas pour l'instant
-          </label>
-        </div>
-        <!--<button type="submit" class="btn btn-default">Submit</button>-->
-      </form>
+    <br/>
+
+    <div class="setup__button">
+      <a href="/mes-tags" class="btn btn-prev btn-half pull-left">Précédent</a>
+      <a href="/jobs" class="btn btn-next btn-half pull-right">Voir les offres</a>
     </div>
-  </center>
 
-  <br/>
-
-  <div class="col-md-12 text-center">
-    <a href="/mes-tags" class="btn prev">&lt; Précédent</a>
-    <a href="/jobs" class="btn btn-primary next">Voir les offres ></a>
   </div>
 </template>

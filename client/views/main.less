@@ -300,8 +300,7 @@ a.btn.prev:hover {
 }
 .setup {
   display: table-cell;
-  vertical-align: middle;
-  padding-bottom: 130px;
+  padding-top: 20px;
   h1 {
     font-family: 'Dancing Script', cursive;
   }
@@ -330,6 +329,27 @@ a.btn.prev:hover {
     border: 0;
     border-bottom: 2px solid darken(#8d5ca1, 10);
     color: white;
+  }
+  .btn-group {
+    width: 100%;
+    .btn-half {
+      margin-bottom: 10px;
+      &.active {
+        background-color: #8d5ca1;
+      }
+    }
+  }
+  .btn-group-alert {
+    width: 75%;
+  }
+  .btn-choice {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-top: 15px;
+    &.active {
+      background-color: #8d5ca1;
+    }
   }
   .selectize-control.single .selectize-input,
   .selectize-input {
