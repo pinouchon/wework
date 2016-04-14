@@ -25,9 +25,16 @@ Router.map(function() {
             //if (!user) {
             //    Router.go('/signIn');
             //} else {
+
+            //}
+            var user = Meteor.user();
+            if (user) {
+                Router.go('/mon-ecole');
+                this.next();
+            } else {
                 $('body').addClass('body-home');
                 this.next();
-            //}
+            }
         },
         onStop: function() {
             $('body').removeClass('body-home');
@@ -220,6 +227,14 @@ Router.map(function() {
     this.route('/mon-ecole', {
         name: 'schoolSetup',
         template: 'schoolSetup',
+        data: function() {
+            return {};
+        }
+    });
+
+    this.route('/ma-recherche', {
+        name: 'searchSetup',
+        template: 'searchSetup',
         data: function() {
             return {};
         }
