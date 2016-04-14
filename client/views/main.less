@@ -303,6 +303,20 @@ a.btn.prev:hover {
   display: table;
   width: 100%;
 }
+@media screen and (min-width: 600px) {
+  .container-funnel {
+    max-width: 600px;
+    margin: auto;
+  }
+  .setup__button,
+  .setup__button-no-fixed {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    position: inherit;
+  }
+}
+
 .setup {
   display: table-cell;
   padding-top: 20px;
@@ -406,4 +420,11 @@ a.btn.prev:hover {
 // fix tag remove icon
 .setup .selectize-control.multi .selectize-input [data-value] .remove {
   padding: 10px 16px 10px 10px;
+}
+
+@media screen and (max-width: 374px) {
+  .btn {
+    font-size: 13px;
+    padding: 8px 0;
+  }
 }
