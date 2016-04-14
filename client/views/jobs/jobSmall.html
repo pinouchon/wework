@@ -1,31 +1,38 @@
 <template name="jobSmall">
     <div class="jobSmall {{#if featured}}featured{{/if}} panel panel-default">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h4>
-				<a href="{{pathFor 'job'}}">{{title}}</a>
-			</h4>
-                </div>
-                <div class="col-sm-4 text-right">
-                    {{>jobLabels}}
-                </div>
+        <div class="panel-body job-offers__list">
+
+          <div class="job-offers__pourcent">
+            98%
+          </div>
+
+          <div class="row">
+              <div class="col-xs-9">
+                  <a href="{{pathFor 'job'}}" class="job-offers__title">
+                    {{title}}
+            			</a>
+              </div>
+          </div>
+          <div class="job-offers__subtitle">
+            <div>
+              <i class="fa fa-calendar"></i> {{formatDate createdAt}}
+                  {{!-- {{#if featured}} - Featured Until {{formatDate featuredThrough}}{{/if}}
+                   --}}
             </div>
-            <div class="row">
-                <div class="col-sm-3">
-                     
-                    <i class="fa fa-calendar"></i> {{formatDate createdAt}}
-                    {{!-- {{#if featured}} - Featured Until {{formatDate featuredThrough}}{{/if}}
-                     --}}
-                    
-                </div>
-                <div class="col-sm-9 text-right">
-                    {{#if company}}<i class="fa fa-building"></i> {{company}}{{/if}}
-                    {{#if location}}
-                        {{#if company}} - {{/if}}<i class="fa fa-map-marker"></i> {{location}}
-                    {{/if}}
-                </div>
+
+            {{#if company}}
+            <div>
+              <i class="fa fa-building"></i> {{company}}
             </div>
+            {{/if}}
+
+            {{#if location}}
+            <div>
+              <i class="fa fa-map-marker"></i> {{location}}
+            </div>
+            {{/if}}
+          </div>
+
         </div>
     </div>
 </template>
