@@ -230,6 +230,11 @@ html,
   &__button {
     width: 100%;
   }
+  &__button-no-fixed {
+    padding: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
 }
 
 // Sign In & Up
@@ -330,12 +335,17 @@ a.btn.prev:hover {
     border-bottom: 2px solid darken(#8d5ca1, 10);
     color: white;
   }
+  .btn-default {
+    background-color: #e2e2e2;
+    color: #666666;
+  }
   .btn-group {
     width: 100%;
     .btn-half {
       margin-bottom: 10px;
       &.active {
         background-color: #8d5ca1;
+        color: white;
       }
     }
   }
@@ -349,6 +359,7 @@ a.btn.prev:hover {
     margin-top: 15px;
     &.active {
       background-color: #8d5ca1;
+      color: white;
     }
   }
   .selectize-control.single .selectize-input,
