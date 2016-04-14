@@ -204,7 +204,8 @@ html,
   }
 }
 @media screen and (min-width: 600px) {
-  .homepage-content {
+  .homepage-content,
+  .container-form {
     max-width: 600px;
     margin: auto;
   }
@@ -229,6 +230,11 @@ html,
 .setup {
   &__button {
     width: 100%;
+  }
+  &__button-no-fixed {
+    padding: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
   }
 }
 
@@ -282,6 +288,10 @@ html,
       color: #d9aaec;
     }
   }
+  .container-form-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 // Fix btn hover
@@ -298,6 +308,20 @@ a.btn.prev:hover {
   display: table;
   width: 100%;
 }
+@media screen and (min-width: 600px) {
+  .container-funnel {
+    max-width: 600px;
+    margin: auto;
+  }
+  .setup__button,
+  .setup__button-no-fixed {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    position: inherit;
+  }
+}
+
 .setup {
   display: table-cell;
   padding-top: 20px;
@@ -330,12 +354,17 @@ a.btn.prev:hover {
     border-bottom: 2px solid darken(#8d5ca1, 10);
     color: white;
   }
+  .btn-default {
+    background-color: #e2e2e2;
+    color: #666666;
+  }
   .btn-group {
     width: 100%;
     .btn-half {
       margin-bottom: 10px;
       &.active {
         background-color: #8d5ca1;
+        color: white;
       }
     }
   }
@@ -349,6 +378,7 @@ a.btn.prev:hover {
     margin-top: 15px;
     &.active {
       background-color: #8d5ca1;
+      color: white;
     }
   }
   .selectize-control.single .selectize-input,
@@ -395,4 +425,11 @@ a.btn.prev:hover {
 // fix tag remove icon
 .setup .selectize-control.multi .selectize-input [data-value] .remove {
   padding: 10px 16px 10px 10px;
+}
+
+@media screen and (max-width: 374px) {
+  .btn {
+    font-size: 13px;
+    padding: 8px 0;
+  }
 }
