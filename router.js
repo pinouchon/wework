@@ -232,6 +232,14 @@ Router.map(function() {
         }
     });
 
+    this.route('/ma-recherche', {
+        name: 'searchSetup',
+        template: 'searchSetup',
+        data: function() {
+            return {};
+        }
+    });
+
     this.route('/mes-tags', {
         name: 'tagsSetup',
         template: 'tagsSetup',

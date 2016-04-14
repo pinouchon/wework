@@ -1,0 +1,95 @@
+<template name="searchSetup">
+
+  <center>
+    <h1>Mes critères de recherche</h1>
+
+    <div class="form-container">
+      <form class="form">
+        <label for="year" class="control-label input-group">
+          Date de début
+        </label>
+
+        <div class="btn-group" data-toggle="buttons" style="margin: 0 auto;text-align: center;">
+
+          <label class="btn btn-default" style="width: 50%">
+            <input name="year" value="2011" type="radio">Dès que possible
+          </label>
+          <label class="btn btn-default active" style="width: 50%">
+            <input name="year" value="2012" type="radio" class="active">Dans une semaine
+          </label>
+          <br/>
+          <label class="btn btn-default" style="width: 50%">
+            <input name="year" value="2013" type="radio">Dans un mois
+          </label>
+          <label class="btn btn-default" style="width: 50%">
+            <input name="year" value="2011" type="radio">Plus tard
+          </label>
+        </div>
+        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+      </form>
+    </div>
+
+    <br/>
+
+    <div class="form-container">
+      <form class="form">
+        <label for="year" class="control-label input-group">
+          Durée du stage
+        </label>
+
+        <div class="btn-group" data-toggle="buttons" style="margin: 0 auto;text-align: center;">
+
+          <label class="btn btn-default" style="width: 57%">
+            <input name="year" value="2011" type="radio">Peu importe
+          </label>
+          <label class="btn btn-default active" style="width: 43%">
+            <input name="year" value="2012" type="radio" class="active">1 mois
+          </label>
+          <br/>
+          <label class="btn btn-default" style="width: 38%">
+            <input name="year" value="2013" type="radio">3 mois
+          </label>
+          <label class="btn btn-default" style="width: 62%">
+            <input name="year" value="2011" type="radio">Plus de 3 mois
+          </label>
+        </div>
+        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+      </form>
+    </div>
+
+    <br/>
+
+    <div class="form-container">
+      <form class="form">
+        <label for="year" class="control-label input-group">
+          Ville
+        </label>
+
+        <div class="btn-group" data-toggle="buttons" style="margin: 0 auto;text-align: center;">
+
+          <label class="btn btn-default" style="width: 65%">
+            <input name="year" value="2011" type="radio">Peu importe
+          </label>
+          <label class="btn btn-default active" style="width: 35%">
+            <input name="year" value="2012" type="radio" class="active">Paris
+          </label>
+          <br/>
+          <label class="btn btn-default" style="width: 35%">
+            <input name="year" value="2013" type="radio">Lyon
+          </label>
+          <label class="btn btn-default" style="width: 65%">
+            <input name="year" value="2011" type="radio">A l'étranger
+          </label>
+        </div>
+        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+      </form>
+    </div>
+  </center>
+
+  <br/>
+
+  <div class="col-md-12 text-center">
+    <a href="/mes-tags" class="btn prev">&lt; Précédent</a>
+    <a href="/mon-ecole" class="btn btn-primary next">Voir les offres ></a>
+  </div>
+</template>
