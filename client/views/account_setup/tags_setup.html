@@ -2,24 +2,39 @@
   <div class="setup">
     <center class="container">
       <h1>Tags</h1>
+
       <p>Voici une liste de tags pré-remplie basée sur votre profil. Complétez-le avec vos propres tags.</p>
     </center>
 
-    <div class="form-container container">
+
+    <div class="form-container">
       <select id="tags" name="tags" multiple="multiple" class="demo-default selectized"
               style="margin: 0 auto;max-width: 600px;" placeholder="tag...">
 
+        <option value="ingénieur" selected="selected">ingénieur</option>
+        <option value="3d" selected="selected">3d</option>
+        <option value="web" selected="selected">web</option>
+        <option value="développement" selected="selected">développement</option>
+        <option value="ux" selected="selected">ux</option>
+        <option value="design" selected="selected">design</option>
+        <option value="réalité virtuelle" selected="selected">réalité virtuelle</option>
+        <option value="interface" selected="selected">interface</option>
+        <option value="ergonomie" selected="selected">ergonomie</option>
+        <option value="c++" selected="selected">c++</option>
+        <option value="openGL" selected="selected">openGL</option>
+        <option value="2d" selected="selected">2d</option>
         {{#each tags}}
           <option value="{{name}}">{{name}}</option>
         {{/each}}
       </select>
     </div>
 
+
     <br/>
 
     <div class="setup__button">
-      <a href="/ma-recherche" class="btn btn-prev btn-half pull-left">Précédent</a>
-      <a href="/mon-alerte-offre" class="btn btn-next btn-half pull-right">Suivant</a>
+      <a href="/ma-recherche" class="btn btn-prev btn-half pull-left">&lt; Précédent</a>
+      <a href="/mon-alerte-offre" class="btn btn-next btn-half pull-right">Suivant ></a>
     </div>
 
   </div>
