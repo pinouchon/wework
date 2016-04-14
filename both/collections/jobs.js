@@ -102,6 +102,9 @@ Jobs.attachSchema(
     logoUrl: {
       type: String
     },
+    percent: {
+      type: String
+    },
     featuredChargeHistory: {
       type: [String],
       optional: true
@@ -185,7 +188,7 @@ Jobs.allow({
 
 //////////////////////////////////// FAKE DATA /////////////////////////////////////////
 if (Meteor.isServer) {
-  if (Jobs.find().count() < 10) {
+  if (true || Jobs.find().count() < 10) {
     var list = [
       {
         //1274248
@@ -217,7 +220,8 @@ if (Meteor.isServer) {
         location: 'Boulogne-Billancourt (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1274248',
         tags: ['ingénieur', '3d', 'vision', 'développement', 'c++', 'openGL', 'openCV', 'image'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/342223/logo.png?1460621778'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/342223/logo.png?1460621778',
+        percent: 98
       },
       {
         //1273185
@@ -293,7 +297,8 @@ if (Meteor.isServer) {
         location: 'Sèvres (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1273185',
         tags: ['ingénieur', '3d', 'réalité virtuelle', 'web', 'développement', 'openGL', 'interface'],
-        logoUrl: "https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/327214/logo.png?1458741341"
+        logoUrl: "https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/327214/logo.png?1458741341",
+        percent: 97
       },
       {
         //1244167
@@ -309,7 +314,8 @@ if (Meteor.isServer) {
         location: 'Paris (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1244167',
         tags: ['ingénieur', '3d', 'réalité virtuelle', 'développement', 'c++', 'informatique'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/331359/logo.png?1459417960'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/331359/logo.png?1459417960',
+        percent: 95
       },
       {
         //1169874
@@ -353,7 +359,8 @@ if (Meteor.isServer) {
         location: 'Paris (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1169874',
         tags: ['ingénieur', '3d', 'image', 'vidéo', 'ux', 'interface', 'ergonomie', 'web'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/313677/logo.png?1457197073'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/313677/logo.png?1457197073',
+        percent: 92
       },
       {
         //1065409
@@ -401,7 +408,8 @@ if (Meteor.isServer) {
         location: 'Paris (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1065409',
         tags: ['ingénieur', 'vidéo', 'image', 'C++', 'openCV', 'vision', 'image', 'développement'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/288719/logo.png?1454926480'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/288719/logo.png?1454926480',
+        percent: 91
       },
       {
         //990068
@@ -440,7 +448,8 @@ if (Meteor.isServer) {
         location: 'Paris (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/990068',
         tags: ['ingénieur', '3d', 'vidéo', 'opengl', 'opencv', 'graphique'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/256054/logo.png?1450782459'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/256054/logo.png?1450782459',
+        percent: 91
       },
       {
         //1250254
@@ -489,7 +498,8 @@ if (Meteor.isServer) {
         location: 'Paris (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1250254',
         tags: ['ingénieur', 'c++', 'interface', 'web', 'design'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/333310/logo.png?1459626076'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/333310/logo.png?1459626076',
+        percent: 76
       },
       {
         //1244522
@@ -505,7 +515,8 @@ if (Meteor.isServer) {
         location: 'Châtenay-Malabry (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1244522',
         tags: ['ingénieur', '3d', '3d', 'c++', 'interface'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/1611/logo.png?1406905260'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/1611/logo.png?1406905260',
+        percent: 75
       },
       {
         //1154958
@@ -535,7 +546,8 @@ if (Meteor.isServer) {
         location: 'Montreuil (France) ',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1154958',
         tags: ['ingénieur', '3d', 'design', 'image', 'vidéo'],
-        logoUrl: 'https://www.jobteaser.com/fr/entreprises/ubisoft'
+        logoUrl: 'https://www.jobteaser.com/fr/entreprises/ubisoft',
+        percent: 72
       },
       {
         //1133141
@@ -563,7 +575,8 @@ if (Meteor.isServer) {
         location: 'Orsay (France)',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1133141',
         tags: ['ingénieur', '3d', 'openGL', 'vidéo', 'web'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/305230/logo.png?1456486210'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/305230/logo.png?1456486210',
+        percent: 45
       },
       {
         //936110
@@ -599,7 +612,8 @@ if (Meteor.isServer) {
         location: 'Gif-sur-Yvette (France) ',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/936110',
         tags: ['ingénieur', '2d', '3d', 'c++', 'image', 'vision'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/assets-3-jobteaser-production/assets/picto_offres_placeholder-b9aab7034d1287684f06695af0a80322.png'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/assets-3-jobteaser-production/assets/picto_offres_placeholder-b9aab7034d1287684f06695af0a80322.png',
+        percent: 39
       },
       {
         //1179764
@@ -628,7 +642,8 @@ if (Meteor.isServer) {
         location: 'Paris (France) ',
         url: 'https://www.jobteaser.com/fr/offres-emploi-stage/1179764',
         tags: ['ingénieur', 'web', 'vision', 'développement', 'informatique'],
-        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/316128/logo.png?1457529437'
+        logoUrl: 'https://storage.gra1.cloud.ovh.net/v1/AUTH_ba5613a94d1942948dd79adf42a2fa02/jobteaser-production/system/asset/logos/316128/logo.png?1457529437',
+        percent: 35
       },
 
 
@@ -658,6 +673,7 @@ if (Meteor.isServer) {
         url: job.url,
         tags: job.tags,
         logoUrl: job.logoUrl,
+        percent: job.percent,
 
         contact: 'jobteaser',
         jobtype: "Internship",

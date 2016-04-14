@@ -3,7 +3,7 @@
         <div class="panel-body job-offers__list">
 
           <div class="job-offers__pourcent">
-            98%
+            {{percent}}%
           </div>
 
           <div class="row">
@@ -15,7 +15,9 @@
           </div>
           <div class="job-offers__subtitle">
             <div>
-              <i class="fa fa-calendar"></i> {{formatDate createdAt}}
+              <i class="fa fa-calendar"></i>
+                {{randomDay}}/04/2016
+              <!--{{formatDate createdAt}}-->
                   {{!-- {{#if featured}} - Featured Until {{formatDate featuredThrough}}{{/if}}
                    --}}
             </div>
