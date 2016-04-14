@@ -316,7 +316,23 @@ a.btn.prev:hover {
     border-bottom: 2px solid darken(#8d5ca1, 10);
     color: white;
   }
-  .selectize-control.single .selectize-input {
+  .btn-half {
+    width: 47%;
+  }
+  .btn-prev {
+    padding: 20px 0;
+    border: 1px solid #8d5ca1;
+    color: #8d5ca1;
+  }
+  .btn-next {
+    padding: 20px 0;
+    background: #8d5ca1;
+    border: 0;
+    border-bottom: 2px solid darken(#8d5ca1, 10);
+    color: white;
+  }
+  .selectize-control.single .selectize-input,
+  .selectize-input {
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -325,6 +341,25 @@ a.btn.prev:hover {
     background-color: white;
     border-radius: 0;
     text-align: center;
+  }
+  .selectize-control.multi .selectize-input.has-items {
+    padding: 15px 5px;
+  }
+  .selectize-dropdown, .selectize-dropdown.form-control {
+    border: 0;
+    .option {
+      padding: 10px;
+    }
+  }
+  .selectize-control.multi .selectize-input [data-value] {
+    background-image: none;
+    background-color: #8d5ca1;
+    border: 0;
+    padding: 10px;
+    .remove {
+      border: 0;
+      padding: 10px;
+    }
   }
 }
 
