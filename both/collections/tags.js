@@ -1,30 +1,116 @@
 Tags = new Mongo.Collection("tags");
 
 if (Meteor.isServer) {
-  if (Tags.find().count() == 0) {
-    Tags.insert({
-      name: 'entreprenariat'
+  if (Tags.find().count() < 30) {
+    var list = [
+      "Management",
+      "Business",
+      "TBD",
+      "Sales",
+      "Marketing",
+      "TBD",
+      "Communication",
+      "Microsoft Office",
+      "Customer Service",
+      "Training",
+      "Microsoft Excel",
+      "Project Management",
+      "Designs",
+      "Analysis",
+      "Research",
+      "Websites",
+      "Budgets",
+      "Organization",
+      "Leadership",
+      "Time Management",
+      "Project Planning",
+      "Computer Program",
+      "Strategic Planning",
+      "Business Services",
+      "Applications",
+      "Reports",
+      "Microsoft Word",
+      "Program Management",
+      "Powerpoint",
+      "Negotation",
+      "Software",
+      "Networking",
+      "Offices",
+      "TBD",
+      "English",
+      "Data",
+      "TBD",
+      "Education",
+      "Events",
+      "International",
+      "Testing",
+      "Writing",
+      "Vendors",
+      "Advertising",
+      "Databases",
+      "Technology",
+      "TBD",
+      "Finance",
+      "Retail",
+      "accounting",
+      "social media",
+      "Teaching",
+      "Engineering",
+      "Performance Tuning",
+      "Problem Solving",
+      "Marketing Strategy",
+      "Materials",
+      "Recruiting",
+      "Order Fulfillment",
+      "Corporate Law",
+      "Photoshop",
+      "TBD",
+      "New business development",
+      "Human resources",
+      "Public speaking",
+      "Manufacturing",
+      "Internal Audit",
+      "strategy",
+      "Employees",
+      "Cost",
+      "Business Development",
+      "Windows",
+      "TBD",
+      "Public Relations",
+      "Product Development",
+      "Auditing",
+      "Business Strategy",
+      "Presentations",
+      "Construction",
+      "Real Estate",
+      "Editing",
+      "Sales Management",
+      "Team Building",
+      "Healthcare",
+      "TBD",
+      "Revenue",
+      "Compliance",
+      "Legal",
+      "Innovation",
+      "Policy",
+      "Mentoring",
+      "Commercial Real Estate",
+      "Consulting",
+      "Information Technology",
+      "Process Improvement",
+      "Change management",
+      "Heavy Equipment",
+      "Teamwork",
+      "Promotions",
+      "Facilities Management",
+      'Béquille'
+    ];
+    Tags.remove({});
+    list.forEach(function(tag) {
+      Tags.insert({
+        name: tag
+      });
     });
-    Tags.insert({
-      name: 'audit'
-    });
-    Tags.insert({
-      name: 'securite'
-    });
-    Tags.insert({
-      name: 'startup'
-    });
-    Tags.insert({
-      name: 'java'
-    });
-    Tags.insert({
-      name: 'ruby'
-    });
-    Tags.insert({
-      name: 'HTML/CSS'
-    });
-    Tags.insert({
-      name: 'javascript'
-    });
+
   }
 }
