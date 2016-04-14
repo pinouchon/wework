@@ -180,11 +180,6 @@ html,
 }
 .homepage {
   height: 100%;
-  &__button {
-    position: fixed;
-    bottom: 0;
-    padding: 20px;
-  }
   &__tagline {
     font-family: 'Dancing Script', cursive;
     font-size: 28px;
@@ -220,6 +215,20 @@ html,
   .app-logo {
     width: 80%;
     height: auto;
+  }
+}
+// commun
+.homepage,
+.setup {
+  &__button {
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+  }
+}
+.setup {
+  &__button {
+    width: 100%;
   }
 }
 
@@ -283,6 +292,40 @@ a.btn.prev:hover {
 .form-container {
   max-width: 700px;
   margin: 0 auto;
+}
+
+.container-funnel {
+  display: table;
+  width: 100%;
+}
+.setup {
+  display: table-cell;
+  vertical-align: middle;
+  padding-bottom: 130px;
+  h1 {
+    font-family: 'Dancing Script', cursive;
+  }
+  center {
+    margin-bottom: 40px;
+  }
+  .btn-all {
+    width: 100%;
+    padding: 20px 0;
+    background: #8d5ca1;
+    border: 0;
+    border-bottom: 2px solid darken(#8d5ca1, 10);
+    color: white;
+  }
+  .selectize-control.single .selectize-input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 27px 0;
+    background-image: none;
+    background-color: white;
+    border-radius: 0;
+    text-align: center;
+  }
 }
 
 .body-home {

@@ -1,27 +1,31 @@
 <template name="schoolSetup">
+  <div class="setup">
+    <center>
+      <h1>Mon école</h1>
+      <p>phrase de présentation</p>
+    </center>
 
-  <center>
-    <h1>Mon école</h1>
-  </center>
-  <div class="form-container">
-    <select class="form-control" id="schools" placeholder="Ecole...">
-      <option value="">Ecole...</option>
-      {{#each schools}}
-        <option value="{{name}}">{{name}}</option>
-      {{/each}}
-    </select>
+    <div class="form-container container">
+      <select class="form-control" id="schools" placeholder="Ecole...">
+        <option value="">Ecole...</option>
+        {{#each schools}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+
+      <br/>
+
+      <select class="form-control" id="specialities" placeholder="Spécialité...">
+      </select>
+    </div>
 
     <br/>
 
-    <select class="form-control" id="specialities" placeholder="Spécialité...">
-    </select>
-  </div>
+    <div class="setup__button">
+      <!--<a href="/" class="btn prev pull-left">&lt; Précédent</a>-->
+      <a href="/mes-tags" class="btn btn-all pull-right">Suivant</a>
+    </div>
 
-  <br/>
-
-  <div class="col-md-12 text-center">
-    <a href="/" class="btn prev">&lt; Précédent</a>
-    <a href="/ma-recherche" class="btn btn-primary next">Suivant ></a>
   </div>
 </template>
 
