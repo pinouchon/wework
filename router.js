@@ -19,15 +19,19 @@ Router.map(function() {
     this.route('home', {
         path: '/',
         layoutTemplate: 'layoutNoContainer',
-        //onBeforeAction: function () {
-        //    var user = Meteor.user();
-        //    var setupOk = user.schoolSetup;
-        //    if (!user || !setupOk) {
-        //        Router.go('schoolSetup');
-        //    } else {
-        //        this.next();
-        //    }
-        //},
+        onBeforeAction: function () {
+            //var user = Meteor.user();
+            //var setupOk = user.schoolSetup;
+            //if (!user) {
+            //    Router.go('/signIn');
+            //} else {
+                $('body').addClass('body-home');
+                this.next();
+            //}
+        },
+        onStop: function() {
+            $('body').removeClass('body-home');
+        },
         data: function() {
             return {
                 jobs: Jobs.find({
@@ -248,9 +252,19 @@ Router.map(function() {
 });
 
 Router.plugin('ensureSignedIn', {
-    only: ['profileEdit', 'profileNew', 'jobEdit', 'jobNew']
+    only: ['profileEdit', 'profileNew', 'jobEdit', 'jobNew',
+    'schoolSetup', 'tagsSetup', 'alertSetup']
 });
 
+Router.onBeforeAction(function() {
+    var route = Router.current().route.getName();
+    if (route == 'signIn' || route == 'signUp') {
+        $('body').addClass('body-islogin');
+    } else {
+        $('body').removeClass('body-islogin');
+    }
+    this.next();
+});
 
 Router.onBeforeAction(function() {
     loadUploadcare();

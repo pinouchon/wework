@@ -12,15 +12,21 @@ Template.header.events({
 });
 
 Template.header.helpers({
-  isHome: function() {
-    return Router.current().route.getName() == 'home';
+  showHeaderFooter: function() {
+    var route = Router.current().route.getName();
+    var isHome = route == 'home';
+    var isFunnel = route == 'schoolSetup' || route == 'tagsSetup' || route == 'alertSetup' || route == 'searchSetup';
+    return !isHome && !isFunnel;
   }
-})
+});
 Template.footer.helpers({
-  isHome: function() {
-    return Router.current().route.getName() == 'home';
+  showHeaderFooter: function() {
+    var route = Router.current().route.getName();
+    var isHome = route == 'home';
+    var isFunnel = route == 'schoolSetup' || route == 'tagsSetup' || route == 'alertSetup' || route == 'searchSetup';
+    return !isHome && !isFunnel;
   }
-})
+});
 
 Template.headerUserMenu.helpers({
   profile: function() {

@@ -180,9 +180,6 @@ html,
 }
 .homepage {
   height: 100%;
-  background: url('images/homepage-background.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   &__tagline {
     font-family: 'Dancing Script', cursive;
     font-size: 28px;
@@ -237,7 +234,6 @@ html,
 
 // Sign In & Up
 .container-form {
-  background: #274a60;
   .at-form {
     margin-top: 0;
   }
@@ -258,7 +254,7 @@ html,
     padding: 27px 0;
     text-align: center;
     color: white;
-    @placehorder-color: #d3d3d3;
+    @placehorder-color: #a0bcdc;
     &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
       color: @placehorder-color;
     }
@@ -297,6 +293,7 @@ a.btn.prev:hover {
   max-width: 700px;
   margin: 0 auto;
 }
+
 .container-funnel {
   display: table;
   width: 100%;
@@ -329,4 +326,13 @@ a.btn.prev:hover {
     border-radius: 0;
     text-align: center;
   }
+}
+
+.body-home {
+  background: url('images/homepage-background.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.body-islogin {
+  background: #274a60;
 }
