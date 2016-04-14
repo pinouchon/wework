@@ -25,9 +25,16 @@ Router.map(function() {
             //if (!user) {
             //    Router.go('/signIn');
             //} else {
+
+            //}
+            var user = Meteor.user();
+            if (user) {
+                Router.go('/mon-ecole');
+                this.next();
+            } else {
                 $('body').addClass('body-home');
                 this.next();
-            //}
+            }
         },
         onStop: function() {
             $('body').removeClass('body-home');
