@@ -249,19 +249,20 @@ html,
     padding: 27px 0;
     text-align: center;
     color: white;
+    @placehorder-color: #d3d3d3;
     &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-      color: white;
+      color: @placehorder-color;
     }
     &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: white;
+      color: @placehorder-color;
       opacity:  1;
     }
     &::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: white;
+      color: @placehorder-color;
       opacity:  1;
     }
     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: white;
+      color: @placehorder-color;
     }
   }
   #at-btn {
