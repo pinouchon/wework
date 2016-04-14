@@ -15,12 +15,12 @@ Template.header.helpers({
   isHome: function() {
     return Router.current().route.getName() == 'home';
   }
-})
+});
 Template.footer.helpers({
   isHome: function() {
     return Router.current().route.getName() == 'home';
   }
-})
+});
 
 Template.headerUserMenu.helpers({
   profile: function() {

@@ -180,9 +180,6 @@ html,
 }
 .homepage {
   height: 100%;
-  background: url('images/homepage-background.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   &__button {
     position: fixed;
     bottom: 0;
@@ -228,7 +225,6 @@ html,
 
 // Sign In & Up
 .container-form {
-  background: #274a60;
   .at-form {
     margin-top: 0;
   }
@@ -286,4 +282,15 @@ a.btn.prev:hover {
 .form-container {
   max-width: 700px;
   margin: 0 auto;
+}
+.body-home {
+  background: url('images/homepage-background.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.body-islogin {
+  background: #274a60;
+}
+.body-islogin ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #7188a2 !important;
 }
