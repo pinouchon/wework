@@ -1,9 +1,39 @@
 <template name="alertSetup">
-  alert setup
+
+  <center>
+    <h1>Créer une alerte</h1>
+
+    <div class="form-container">
+      <form class="form">
+        <label for="year" class="control-label input-group">
+          M'envoyer un récapitulatif des nouvelles offres
+        </label>
+
+        <div class="btn-group" data-toggle="buttons" style="margin: 0 auto;text-align: center;">
+
+          <label class="btn btn-default" style="width: 43%">
+            <input name="year" value="2011" type="radio">Tous les jours
+          </label>
+          <label class="btn btn-default active" style="width: 57%">
+            <input name="year" value="2012" type="radio" class="active">Toutes les semaines
+          </label>
+          <br/>
+          <label class="btn btn-default" style="width: 50%">
+            <input name="year" value="2013" type="radio">Tous les mois
+          </label>
+          <label class="btn btn-default" style="width: 50%">
+            <input name="year" value="2011" type="radio">Pas pour l'instant
+          </label>
+        </div>
+        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+      </form>
+    </div>
+  </center>
 
   <br/>
+
   <div class="col-md-12 text-center">
     <a href="/mes-tags" class="btn prev">&lt; Précédent</a>
-    <a href="/offres" class="btn btn-primary next">Suivant ></a>
+    <a href="/offres" class="btn btn-primary next">Voir les offres ></a>
   </div>
 </template>
