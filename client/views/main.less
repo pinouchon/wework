@@ -245,19 +245,20 @@ html,
     padding: 27px 0;
     text-align: center;
     color: white;
+    @placehorder-color: #a0bcdc;
     &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-      color: white;
+      color: @placehorder-color;
     }
     &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-      color: white;
+      color: @placehorder-color;
       opacity:  1;
     }
     &::-moz-placeholder { /* Mozilla Firefox 19+ */
-      color: white;
+      color: @placehorder-color;
       opacity:  1;
     }
     &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: white;
+      color: @placehorder-color;
     }
   }
   #at-btn {
@@ -283,6 +284,7 @@ a.btn.prev:hover {
   max-width: 700px;
   margin: 0 auto;
 }
+
 .body-home {
   background: url('images/homepage-background.jpg');
   background-size: 100% auto;
@@ -290,7 +292,4 @@ a.btn.prev:hover {
 }
 .body-islogin {
   background: #274a60;
-}
-.body-islogin ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color: #7188a2 !important;
 }

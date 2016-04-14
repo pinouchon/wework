@@ -1,6 +1,6 @@
 <template name="layout">
 	{{>yield region='header'}}
-	<div id="content-wrapper" class="container">
+	<div id="content-wrapper" class="{{containerClass}}">
 		{{>yield}}
 	</div>
 	{{>yield region='footer'}}
