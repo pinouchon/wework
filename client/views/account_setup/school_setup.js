@@ -1,20 +1,12 @@
-Specialities = ['foo', 'bar'];
 
 Template.schoolSetup.helpers({
   schools: function () {
     return Schools.find();
-  },
-
-  specialities: function () {
-    return Specialities;
   }
 });
 
 Template.schoolSetup.events({
-  //'keyup #schools': function(e) {
-  //  console.log(e);
-  //}
-  'click .next': function() {
+  'click .prev, click .next': function() {
     $('#schools').hide().selectize()[0].selectize.destroy();
     $('#specialities').hide().selectize()[0].selectize.destroy();
   }
@@ -60,8 +52,4 @@ Template.schoolSetup.rendered = function () {
     closeAfterSelect: true
   })[0].selectize.disable();
 
-
-  //var select = $("#YourDropDownId").selectize();
-  //var selectize = select[0].selectize;
-  //selectize.disable();
 };
